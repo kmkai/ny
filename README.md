@@ -1,0 +1,2 @@
+# ny
+bare eksempel
