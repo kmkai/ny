@@ -50,3 +50,11 @@ video {
     opacity: 1; /* Fade in to full opacity */
   }
 }
+
+@media (max-width: 100px) {
+  video {
+    max-height: 100%; /* Video will fill the height but not exceed the viewport's height */
+    width: 100%; /* Ensure video fills the width of its container */
+    object-fit: cover; /* Cover the container fully, may cut off some video content */
+  }
+}
