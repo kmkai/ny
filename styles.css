@@ -51,16 +51,19 @@ video {
   }
 }
 
-@media (max-width: 100px) {
+@media (max-width: 1000px) {
   video {
-    width: 100%; /* Ensure video fills the width of its container */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the area, may crop the video */
+    width: 100%; /* Fyller bredden av skjermen */
+    height: 100%; /* Fyller høyden av skjermen */
+    object-fit: cover; /* Dekker tilgjengelig område, kan kutte av videoen */
   }
 
   .video-container {
     padding: 0;
     margin: 0;
-    /* Other styles remain unchanged */
+    width: 100vw; /* Legg til full skjermvidde for video-container */
+    height: 100vh; /* Legg til full skjermhøyde for video-container */
+    justify-content: flex-start; /* Justerer videoen til toppen */
+    align-items: flex-start; /* Justerer videoen til venstre */
   }
 }
