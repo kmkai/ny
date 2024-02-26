@@ -47,6 +47,33 @@
       .paragraph {
         margin: 20px 0;
       }
+
+      @media (max-width: 1000px) {
+        .header-image {
+          height: 25%; /* Justerer høyden til toppbildet */
+        }
+
+        .image-title {
+          font-size: 30px; /* Mindre tekststørrelse for tittelen */
+        }
+
+        .content {
+          font-size: 22px; /* Mindre tekststørrelse for bedre lesbarhet */
+          text-align: left;
+          width: 100%; /* Bruker hele skjermens bredde */
+          padding: 0; /* Fjerner padding for å tillate bildet å strekke seg til kantene */
+        }
+
+        .content img {
+          max-width: 100%; /* Setter bildets maksbredde til 100% */
+          height: auto; /* Justerer bildets høyde for å opprettholde aspekt ratio */
+          margin: 0 auto; /* Sentrerer bildet */
+        }
+
+        .paragraph {
+          margin: 10px 20px; /* Tilføyer litt margin på sidene for tekst */
+        }
+      }
     </style>
   </head>
   <body>

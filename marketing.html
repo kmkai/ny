@@ -29,7 +29,6 @@
       .image-title {
         color: white;
         font-size: 48px;
-        text-align: center;
       }
 
       .content {
@@ -37,6 +36,7 @@
         padding: 20px;
         margin: 0 auto;
         width: 50%;
+        text-align: left;
       }
 
       .content img {
@@ -46,6 +46,33 @@
 
       .paragraph {
         margin: 20px 0;
+      }
+
+      @media (max-width: 1000px) {
+        .header-image {
+          height: 25%; /* Justerer høyden til toppbildet */
+        }
+
+        .image-title {
+          font-size: 30px; /* Mindre tekststørrelse for tittelen */
+        }
+
+        .content {
+          font-size: 22px; /* Mindre tekststørrelse for bedre lesbarhet */
+          text-align: left;
+          width: 100%; /* Bruker hele skjermens bredde */
+          padding: 0; /* Fjerner padding for å tillate bildet å strekke seg til kantene */
+        }
+
+        .content img {
+          max-width: 100%; /* Setter bildets maksbredde til 100% */
+          height: auto; /* Justerer bildets høyde for å opprettholde aspekt ratio */
+          margin: 0 auto; /* Sentrerer bildet */
+        }
+
+        .paragraph {
+          margin: 10px 20px; /* Tilføyer litt margin på sidene for tekst */
+        }
       }
     </style>
   </head>
@@ -68,26 +95,29 @@
 
       <!-- Replicate the paragraph and image block as needed -->
       <p class="paragraph">
-        Med utvikling av AI i markedsføringsstrategien for den travle
-        veterinærklinikken, var det mål om å forsterke kundeforhold gjennom
-        sosiale medier. I intervju med kundene til vetrinæren ønsket de å forstå
-        tjenester og omsorg gjennom sosiale medier. Inspirert av suksessen til
-        We Rate Dogs, en populær sosial mediekonto med 9 millioner følgere,
-        tilpasset jeg AI for å generere engasjerende innlegg som fremhever
-        klinikkens tjenester og dyrenes omsorg. Dette gjorde det lettere for
-        både eksisterende og potensielle kunder å få innsikt i hvordan klinikken
-        opererer og den omsorgen de tilbyr.
+        MinAI lagde en AI som hjelper veterinærer å markedsføre seg ved å
+        fortelle historier om dyrene de tar vare på og bygge kunderelasjoner med
+        sine kunder.
       </p>
       <p class="paragraph">
-        Vi introduserte en konkurranse der de kan vinne gavekort ved å dele
-        personlige historier om deres kjæledyr med vetrinæren. Disse historiene
-        blir så omskapt av AI til fengende fortellinger som publiseres på
-        nettsiden og på sosiale medier. Dette tiltaket har ikke bare styrket
-        båndene med nåværende kunder, men også effektivt trukket til seg nye
-        kunder. Ved å kommunisere klinikkens verdi effektiv gjennom kundenes
-        egne historier, uten at det krever ekstra tid fra veterinæren. Og med
-        innleggene har nå kundene det de trenger for å forstå omsorg og tillit
-        på vetrinær sine ferdigheter for å starte samtale med vetrinæren.
+        Det virker slik: Kunder forteller om sine erfaringer hos veterinæren, og
+        så bruker MinAI teksten for å lage korte, hyggelige historier. Disse
+        historiene er inspirert av dyre historier fra 'We Rate Dogs' en sosial
+        bruker med 9 millioner følgere. Historiene deles på nettsiden for
+        veterinæren for å vise tjenestene, hvordan veterinæren jobber og hvordan
+        veterinæren bryr seg om dyrene.
+      </p>
+      <p class="paragraph">
+        Veterinæren får tak i historiene dels fordi kundene selv skriver om sine
+        erfaringer og dels ved at kundene deltar i en konkurranse som er
+        publisert på nettsidene til veterinæren. De beste innleggene vinner
+        gavekort. MinAI tar kundenes historier og gjør disse om til tekst slik
+        at veterinæren slipper å bruke ekstra tid på det.
+      </p>
+      <p class="paragraph">
+        Historiene gjør at flere får vite om den gode jobben veterinæren gjør,
+        veterinæren beholder eksisterende kunder og kan også få flere nye kunder
+        til klinikken.
       </p>
       <img src="nettsidevet3.jpg" alt="Beskrivende tekst" />
 
