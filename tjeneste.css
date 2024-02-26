@@ -100,13 +100,13 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600px), (max-height: 700px) {
   .image-container img {
     bottom: -5%;
-    right: -45%;
-    height: 110%;
+    right: -40%;
+    height: 115%;
     width: auto; /* Maintain the width to preserve aspect ratio */
-    object-fit: contain; /* Ensures the image is contained within the element bounds */
+    object-fit: cover; /* Ensures the image is contained within the element bounds */
     object-position: bottom; /* Align the image to the bottom */
   }
 
@@ -132,5 +132,15 @@ body {
   .image-title {
     left: 40%;
     top: 25%;
+  }
+}
+
+@media (max-width: 600px), (max-height: 950px) {
+  .image-container img {
+    right: -50%;
+    height: 110%;
+    width: auto; /* Maintain the width to preserve aspect ratio */
+    object-fit: cover; /* Ensures the image is contained within the element bounds */
+    object-position: bottom; /* Align the image to the bottom */
   }
 }
