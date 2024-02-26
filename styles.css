@@ -53,8 +53,14 @@ video {
 
 @media (max-width: 100px) {
   video {
-    max-height: 100%; /* Video will fill the height but not exceed the viewport's height */
     width: 100%; /* Ensure video fills the width of its container */
-    object-fit: cover; /* Cover the container fully, may cut off some video content */
+    height: auto; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area, may crop the video */
+  }
+
+  .video-container {
+    padding: 0;
+    margin: 0;
+    /* Other styles remain unchanged */
   }
 }
