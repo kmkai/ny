@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tjeneste Side</title>
+    <style>
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden; /* Prevents scrollbars from appearing */
+      }
+
+      .image-container {
+        position: relative;
+        height: 100%;
+        width: 100%;
+      }
+      .image-container img {
+        position: absolute;
+        bottom: 0; /* Align the image to the bottom of the container */
+        right: 0; /* Align the image to the right of the container */
+        height: 140%; /* Increase the height so that the bottom 80% is always in view */
+        width: auto; /* Maintain the width to preserve aspect ratio */
+        object-fit: contain; /* Ensures the image is contained within the element bounds */
+        object-position: bottom; /* Align the image to the bottom */
+      }
+
+      .image-title {
+        position: absolute;
+        left: 30%; /* Center the title in the middle of the left half of the image */
+        top: 35%;
+        transform: translate(-50%, -50%); /* Adjust the exact center position */
+        color: white; /* Set the color of the title */
+        font-size: 2em; /* Set the size of the title */
+        z-index: 10; /* Make sure the title is above the images */
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      .clickable-box {
+        position: absolute;
+        right: 0; /* Place on the right side */
+        width: 45%; /* Width of the clickable area */
+        background: rgba(0, 0, 0, 0); /* Invisible background */
+        cursor: pointer; /* Change cursor to indicate this area is clickable */
+      }
+
+      /* Position the boxes on top of each other */
+      .clickable-box:nth-of-type(1) {
+        top: 0;
+        height: 44%; /* Each box will take a third of the height */
+      }
+
+      .clickable-box:nth-of-type(2) {
+        top: 43%;
+        height: 25%; /* Each box will take a third of the height */
+      }
+
+      .clickable-box:nth-of-type(3) {
+        top: 70%;
+        height: 40%; /* Each box will take a third of the height */
+      }
+    </style>
+  </head>
+  <body>
+    <div class="image-container">
+      <img src="4.jpg" alt="Bilde 4" />
+      <img src="3.png" alt="Bilde 1" />
+      <img src="2.png" alt="Bilde 2" />
+      <img src="1.png" alt="Bilde 3" />
+      <a href="marketing.html" class="clickable-box"></a>
+      <a href="aiwebsite.html" class="clickable-box"></a>
+      <a href="design.html" class="clickable-box"></a>
+      <div class="image-title">Oppnå nye høyder sammen</div>
+    </div>
+  </body>
+</html>

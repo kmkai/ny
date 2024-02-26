@@ -1,0 +1,52 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  background-color: black;
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  overflow: hidden; /* Ensure no scrolling */
+  font-family: Arial, sans-serif; /* Set font family */
+}
+
+.video-container {
+  height: 100vh; /* Full height of the viewport */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+}
+
+video {
+  max-height: 100%; /* Video will fill the height but not exceed the viewport's height */
+  max-width: none; /* Default value to ensure video's width is not constrained */
+  object-fit: contain; /* Ensures the aspect ratio is preserved */
+}
+
+.overlay {
+  position: absolute;
+  top: 60%; /* Juster denne verdien for å flytte overlay nedover */
+  z-index: 10; /* Ensures the overlay is above the video */
+  width: 100%; /* Overlay takes the full width of the viewport */
+  text-align: center; /* Center text horizontally */
+  padding: 20px; /* Adds some padding around the content */
+  color: white; /* Set text color to white */
+  animation: fadeIn 2s ease-out 15s forwards; /* Animation added */
+  opacity: 0; /* Start with overlay completely transparent */
+}
+
+.button {
+  font-size: 28px;
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  color: white; /* Set button text color to white */
+  background-color: grey; /* Make button background transparent */
+  border: 4px solid white; /* Set button border to white */
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1; /* Fade in to full opacity */
+  }
+}
