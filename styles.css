@@ -19,30 +19,59 @@ html {
 
 video {
   max-height: 100%; /* Video will fill the height but not exceed the viewport's height */
-  max-width: none; /* Default value to ensure video's width is not constrained */
+  max-width: 100%; /* Default value to ensure video's width is not constrained */
   object-fit: contain; /* Ensures the aspect ratio is preserved */
 }
 
 .overlay {
   position: absolute;
   top: 60%; /* Juster denne verdien for å flytte overlay nedover */
-  z-index: 10; /* Ensures the overlay is above the video */
-  width: 100%; /* Overlay takes the full width of the viewport */
-  text-align: center; /* Center text horizontally */
-  padding: 20px; /* Adds some padding around the content */
-  color: white; /* Set text color to white */
-  animation: fadeIn 2s ease-out 15s forwards; /* Animation added */
-  opacity: 0; /* Start with overlay completely transparent */
+  z-index: 10; /* Sørger for at overlay er over videoen */
+  text-align: center; /* Sentrerer tekst horisontalt */
+  color: white; /* Setter tekstfarge til hvit */
+  animation: fadeIn 2s ease-out 15s forwards; /* Animasjon lagt til */
+  opacity: 0; /* Starter med at overlay er helt gjennomsiktig */
+  border-radius: 20px; /* Avrundede hjørner */
+  display: flex; /* Gjør .overlay til en flex-container */
+  flex-direction: column; /* Organiserer innholdet vertikalt */
+  align-items: center; /* Sentrerer elementene på tvers */
+  justify-content: center; /* Sentrerer elementene langs hovedaksen */
+}
+
+.overlay h1 {
+  background-color: rgba(
+    102,
+    102,
+    102,
+    0.653
+  ); /* Hvit med 50% gjennomsiktighet */
+  display: inline-block; /* Sørger for at bakgrunnen kun dekker teksten */
+  padding: 5px 10px; /* Litt polstring rundt teksten */
+  border-radius: 10px; /* Avrundede hjørner på teksten sin bakgrunn */
+  margin-bottom: 20px; /* Legger til avstand mellom tittelen og knappe-containeren */
+  margin: 20px;
+}
+
+.buttons-container {
+  display: flex; /* Gjør dette til en flex-container */
+  justify-content: center; /* Sentrerer knappene horisontalt */
+  gap: 20px; /* Legger til litt mellomrom mellom knappene */
 }
 
 .button {
   font-size: 28px;
   padding: 10px 20px;
-  margin: 10px;
+  /* margin: 10px; */
   cursor: pointer;
-  color: white; /* Set button text color to white */
-  background-color: grey; /* Make button background transparent */
-  border: 4px solid white; /* Set button border to white */
+  color: white; /* Setter knappetekstens farge til hvit */
+  background-color: rgba(
+    118,
+    118,
+    118,
+    0.734
+  ); /* Grå med 50% gjennomsiktighet */
+  border: 4px solid white; /* Setter knappekanten til hvit */
+  border-radius: 10px; /* Avrundede hjørner */
 }
 
 @keyframes fadeIn {
@@ -53,17 +82,17 @@ video {
 
 @media (max-width: 1000px) {
   video {
-    width: 100%; /* Fyller bredden av skjermen */
-    height: 100%; /* Fyller høyden av skjermen */
-    object-fit: cover; /* Dekker tilgjengelig område, kan kutte av videoen */
+    width: 100%; /* Fill the width of the screen */
+    height: 100%; /* Adjust height automatically */
+    object-fit: cover; /* Cover the available area, might crop the video */
   }
 
   .video-container {
     padding: 0;
     margin: 0;
-    width: 100vw; /* Legg til full skjermvidde for video-container */
-    height: 100vh; /* Legg til full skjermhøyde for video-container */
-    justify-content: flex-start; /* Justerer videoen til toppen */
-    align-items: flex-start; /* Justerer videoen til venstre */
+    width: 100vw; /* Full screen width for video-container */
+    height: 100vh; /* Full screen height for video-container */
+    justify-content: flex-start; /* Align the video to the top */
+    align-items: flex-start; /* Align the video to the left */
   }
 }

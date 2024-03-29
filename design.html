@@ -15,6 +15,26 @@
         font-size: 24px;
       }
 
+      .back-button {
+        font-family: Arial, Helvetica, sans-serif;
+        z-index: 100;
+        position: fixed;
+        top: 30px; /* Juster etter behov */
+        left: 23px; /* Juster etter behov */
+        padding: 10px 20px;
+        background-color: #3897fc; /* Blå bakgrunn, endre etter behov */
+        color: white; /* Hvit tekstfarge */
+        text-decoration: none; /* Fjerner underlinjen fra lenker */
+        border-radius: 5px; /* Gjør kantene av knappen rundet */
+        font-size: 24px; /* Juster størrelsen på teksten etter behov */
+      }
+
+      .back-button:hover {
+        background-color: #0056b3; /* Mørkere blå for hover-effekt, endre etter behov */
+        color: #ffffff;
+        text-decoration: none;
+      }
+
       .header-image {
         position: relative;
         height: 30%; /* Your desired height */
@@ -54,11 +74,12 @@
         }
 
         .image-title {
-          font-size: 30px; /* Mindre tekststørrelse for tittelen */
+          font-size: 40px;
+          padding-top: 5px;
         }
 
         .content {
-          font-size: 22px; /* Mindre tekststørrelse for bedre lesbarhet */
+          font-size: 25px; /* Mindre tekststørrelse for bedre lesbarhet */
           text-align: left;
           width: 100%; /* Bruker hele skjermens bredde */
           padding: 0; /* Fjerner padding for å tillate bildet å strekke seg til kantene */
@@ -77,6 +98,8 @@
     </style>
   </head>
   <body>
+    <a href="javascript:history.back()" class="back-button">Tilbake</a>
+
     <div class="header-image">
       <div class="image-title">Design av Min AI</div>
     </div>

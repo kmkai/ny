@@ -15,6 +15,27 @@
         font-size: 24px;
       }
 
+      .back-button {
+        font-family: Arial, Helvetica, sans-serif;
+        z-index: 100;
+        position: fixed;
+        top: 30px; /* Juster etter behov */
+        left: 23px; /* Juster etter behov */
+
+        padding: 10px 20px;
+        background-color: #3897fc; /* Blå bakgrunn, endre etter behov */
+        color: white; /* Hvit tekstfarge */
+        text-decoration: none; /* Fjerner underlinjen fra lenker */
+        border-radius: 5px; /* Gjør kantene av knappen rundet */
+        font-size: 24px; /* Juster størrelsen på teksten etter behov */
+      }
+
+      .back-button:hover {
+        background-color: #0056b3; /* Mørkere blå for hover-effekt, endre etter behov */
+        color: #ffffff;
+        text-decoration: none;
+      }
+
       .header-image {
         position: relative;
         height: 30%; /* Your desired height */
@@ -48,17 +69,39 @@
         margin: 20px 0;
       }
 
+      /* Legg til i din eksisterende @media (max-width: 1000px) regel */
+      a {
+        word-wrap: break-word; /* Sørger for at lenker kan brytes ved ord */
+        overflow-wrap: break-word; /* Sikrer at lenker kan brytes for å forhindre utstikk */
+        word-break: break-all; /* Bryter ord om nødvendig for å forhindre overflow */
+        display: inline-block; /* Gjør at lenker respekterer padding og margin innenfor sin egen boks */
+        max-width: 100%; /* Forhindrer lenker i å strekke seg utover skjermens bredde */
+      }
+
+      .content,
+      .paragraph {
+        box-sizing: border-box; /* Inkluderer padding og border i elementets totalbredde */
+        max-width: 100%; /* Begrenser maksimal bredde til å være 100% av skjermens bredde */
+        padding: 0 10px; /* Tilføyer litt padding på sidene for å forhindre at innholdet berører skjermkantene */
+      }
+
       @media (max-width: 1000px) {
         .header-image {
           height: 25%; /* Justerer høyden til toppbildet */
         }
 
+        .back-button {
+          top: 0px; /* Juster etter behov */
+          left: 0px; /* Juster etter behov */
+        }
+
         .image-title {
-          font-size: 30px; /* Mindre tekststørrelse for tittelen */
+          font-size: 40px;
+          padding-top: 5px;
         }
 
         .content {
-          font-size: 22px; /* Mindre tekststørrelse for bedre lesbarhet */
+          font-size: 25px; /* Mindre tekststørrelse for bedre lesbarhet */
           text-align: left;
           width: 100%; /* Bruker hele skjermens bredde */
           padding: 0; /* Fjerner padding for å tillate bildet å strekke seg til kantene */
@@ -70,13 +113,27 @@
           margin: 0 auto; /* Sentrerer bildet */
         }
 
+        /* Legg til i din eksisterende @media (max-width: 1000px) regel */
+        a {
+          word-wrap: break-word; /* Sørger for at lenker kan brytes ved ord */
+          overflow-wrap: break-word; /* Sikrer at lenker kan brytes for å forhindre utstikk */
+          word-break: break-all; /* Bryter ord om nødvendig for å forhindre overflow */
+          display: inline-block; /* Gjør at lenker respekterer padding og margin innenfor sin egen boks */
+          max-width: 100%; /* Forhindrer lenker i å strekke seg utover skjermens bredde */
+        }
+
+        .content,
         .paragraph {
-          margin: 10px 20px; /* Tilføyer litt margin på sidene for tekst */
+          box-sizing: border-box; /* Inkluderer padding og border i elementets totalbredde */
+          max-width: 100%; /* Begrenser maksimal bredde til å være 100% av skjermens bredde */
+          padding: 0 10px; /* Tilføyer litt padding på sidene for å forhindre at innholdet berører skjermkantene */
         }
       }
     </style>
   </head>
   <body>
+    <a href="javascript:history.back()" class="back-button">Tilbake</a>
+
     <div class="header-image">
       <div class="image-title">AI i Nettside</div>
     </div>

@@ -1,0 +1,82 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: "Arial", sans-serif;
+  color: #2d192d;
+}
+
+.back-button {
+  position: absolute;
+  top: 30px; /* Juster etter behov */
+  left: 23px; /* Juster etter behov */
+  padding: 10px 20px;
+  background-color: #007bff; /* Blå bakgrunn, endre etter behov */
+  color: white; /* Hvit tekstfarge */
+  text-decoration: none; /* Fjerner underlinjen fra lenker */
+  border-radius: 5px; /* Gjør kantene av knappen rundet */
+  font-size: 24px; /* Juster størrelsen på teksten etter behov */
+}
+
+.back-button:hover {
+  background-color: #0056b3; /* Mørkere blå for hover-effekt, endre etter behov */
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.content-wrapper {
+  display: flex;
+  height: 100%;
+}
+
+.image-section {
+  background-image: url("ai2.png");
+  background-repeat: no-repeat;
+  background-size: cover; /* Dekker hele seksjonen */
+  flex: 1; /* Tar halvparten av bredden */
+}
+
+.contact-info {
+  flex: 1; /* Tar den andre halvparten av bredden */
+  display: flex;
+  align-items: center; /* Sentrerer teksten vertikalt */
+  padding: 0 20px;
+}
+
+.about-section {
+  padding: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  background-color: #e6ff005e;
+  line-height: 30px;
+}
+
+.about-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.about-section > div {
+  margin-top: 50px;
+  font-weight: none;
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .image-section {
+    width: 100%;
+    height: 50vh; /* Justerer høyden for mobilvisning */
+    background-size: cover;
+    background-position: center;
+  }
+
+  .contact-info {
+    padding: 20px;
+    padding-top: 50px;
+  }
+}

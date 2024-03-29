@@ -9,7 +9,7 @@
   <body>
     <div class="video-container">
       <!-- The video -->
-      <video autoplay loop muted playsinline>
+      <video autoplay loop muted playsinline preload="auto">
         <source src="firstvideo.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
@@ -18,8 +18,11 @@
       <!-- The overlay content -->
       <div class="overlay">
         <h1>Oppnå nye høyder sammen med Min AI</h1>
-        <a href="tjeneste.html"><button class="button">Tjeneste</button></a>
-        <a href="kontakt.html"><button class="button">Kontakt</button></a>
+        <div class="buttons-container">
+          <!-- Ny container for knappene -->
+          <a href="tjeneste.html"><button class="button">Tjeneste</button></a>
+          <a href="kontakt.html"><button class="button">Kontakt</button></a>
+        </div>
       </div>
     </div>
     <script src="script.js"></script>
