@@ -42,7 +42,7 @@ body {
 } */
 
 .image-container img {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   max-height: 130vh; /* Skaler høyden basert på viewport-høyden */
