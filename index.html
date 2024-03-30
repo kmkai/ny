@@ -8,10 +8,13 @@
   </head>
   <body>
     <div class="video-container">
-      <video id="myVideo" autoplay loop muted playsinline>
+      <video autoplay loop muted playsinline>
+        <source src="aiw.mp4" type="video/webm" />
         <source src="nyeaii.mp4" type="video/mp4" />
+        <!-- Fallback til H.264 hvis WebM ikke støttes -->
         Your browser does not support the video tag.
       </video>
+
       <div class="overlay">
         <h1>Oppnå nye høyder sammen med Min AI</h1>
         <div class="buttons-container">
